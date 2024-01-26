@@ -1,26 +1,29 @@
 # Project Name
 
-Short description or purpose of the project.
+Solution to the exercise for the application process at New Day
+
+This project executes two spark jobs movies_ingest_job and movies_transform_job 
+
+A test module is also included to follow best practices
 
 ## Table of Contents
 
-- [Installation](#installation)
 - [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+- [Usage](#Testing)
 
-## Installation
-
-Provide instructions on how to install and configure your project. Include any dependencies and how to install them.
 
 ## Usage
 
-Provide examples or instructions on how to use your project. Include any necessary commands, configurations, or usage scenarios.
+It is assumed that necessary libs are locally installed (i.e spark, pyspark...)
 
-## Contributing
+First run to ingest data:
+spark-submit --master local jobs/movies_ingest_job.py resources/ml-1m/ resources/ingest/
 
-Explain how others can contribute to your project. Include guidelines for submitting bug reports, feature requests, or code contributions.
+Second run to transform data:
+spark-submit --master local jobs/movies_transform_job.py resources/ingest/ resources/transform/
 
-## License
+## Testing
+It is assumed that necessary libs are installed (i.e make)
+To run the test module:
 
-Specify the license under which your project is distributed. Include any additional terms or disclaimers.
+make tests
