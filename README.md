@@ -14,16 +14,16 @@ A test module with a make file is also included to follow best practices
 
 ## Usage
 
-It is assumed that necessary libs are locally installed (i.e spark, pyspark...)
+It is assumed that necessary libs are locally installed (i.e spark, pyspark...)\
 
-First run to ingest data:
+First run to ingest data:\
 spark-submit --master local jobs/movies_ingest_job.py resources/ml-1m/ resources/ingest/
 
-Second run to transform data:
+Second run to transform data:\
 spark-submit --master local jobs/movies_transform_job.py resources/ingest/ resources/transform/
 
 ## Testing
-It is assumed that necessary libs are installed (i.e make)
-To run the test module:
+It is assumed that necessary libs are installed (i.e make)\
+To run the test module:\
 
 make tests
