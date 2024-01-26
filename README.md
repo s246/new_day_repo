@@ -4,12 +4,12 @@ Solution to the exercise for the application process at New Day
 
 This project executes two spark jobs movies_ingest_job and movies_transform_job 
 
-A test module is also included to follow best practices
+A test module with a make file is also included to follow best practices
 
 ## Table of Contents
 
 - [Usage](#usage)
-- [Usage](#Testing)
+- [Testing](#Testing)
 
 
 ## Usage
