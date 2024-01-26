@@ -1,5 +1,5 @@
 import logging
-
+import os
 import sys
 from pyspark.sql import SparkSession
 
@@ -29,6 +29,13 @@ if __name__ == '__main__':
     # get paths from arguments
     input_path = sys.argv[1]
     output_path = sys.argv[2]
+
+    if not os.path.isdir(output_path):
+        os.makedirs(output_path)
+        print(f"created folder : {output_path}")
+
+    else:
+        print("ingest folder already exists")
 
     #FOR DEBUG
     # input_path='../resources/ingest/'
